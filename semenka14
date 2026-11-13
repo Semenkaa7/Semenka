@@ -1,0 +1,40 @@
+#include <iostream>
+#include <Windows.h>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int max2(int a, int b) {
+	if (a > b) {
+		return a; 
+	}
+	else {
+		return b;
+	}
+}
+void playGame() {	
+	int player = 0;
+	int computer = 0;
+	cout << "Начинаемм!!!";
+}
+int main() {
+	SetConsoleCP(65001);
+	SetConsoleOutputCP(65001);
+
+	int x;
+	while(true) {
+	cout << ".Добро пожаловать!!!\n ";
+	cout << "1.Начать игру\n";
+	cout << "2.Выйти\n";
+
+	if (x == 2) {
+		cout << "Досвиданияя!";
+	}
+	else if (x == 1) {
+		cout << "Введите число";
+		int y;
+		cin >> y;
+
+
+	}
+	system("pause < nul");
+}

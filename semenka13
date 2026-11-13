@@ -1,0 +1,41 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+int square(int x);
+int main() {
+	SetConsoleCP(65001);
+	SetConsoleOutputCP(65001);
+
+	int x;
+	cout << "===ЗДРАВСТВУЙТЕ===\n";
+	cout << "МЕНЮ\n\n";
+	cout << "1.Вычислить вкадрат числа\n";
+	cout << "2.Вычислить площадь квадрата (по длине стороны)\n";
+	cout << "3.Выйти\n";
+
+	if (x == 3) {
+		cout << "Досвидания!!!\n";
+
+	} else if (x == 1) {
+		int num;
+		cout << "Введите число\n";
+		cin >> num;
+		int result = square(num);
+		cout << "квадрат числа " << num << "равен " << result << endl;
+	}
+	else if (x == 2) {
+		int side;
+		cout << "Введите длину стороны ";
+		cin >> side;
+
+		if (side < 0) {
+			cout << "Длина стороны может не быть отрицательной!!! " << endl;
+		}
+		else {
+			int area = square(side);
+			cout << "Площадь квадрата со стороной " << side << " равна " << area << endl;
+		}
+
+	}
+	system("pause < nul");
+}

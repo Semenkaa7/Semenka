@@ -1,0 +1,56 @@
+#include <iostream>
+#include <Windows.h>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int max2(int a, int b) {
+	if (a > b) {
+		return a;
+	}
+	else {
+		return b;
+	}
+}
+void playGame() {
+	int player = 0;
+	int computer = 0;
+	cout << "Начинаемм!!!";
+	for (int round = 1; round <= 5; round++) {
+		cout << "\n Раунд [" << round << "/5] | счет: " << player << " : " << computer << "\n";
+
+		int playernum;
+
+		while (true) {
+			cout << "Ваше число ";
+			cin >> playernum;
+			if (playernum >= 1 && playernum <= 10) {
+				break;
+			}
+			cout << "Ошибка! Введите число 1-10\n";
+		}
+
+		int compnum = rand() % 10 + 1;
+		cout << "Число компьютера: " << compnum << "\n";
+		int win = max2(playernum, compnum);
+int main() {
+	SetConsoleCP(65001);
+	SetConsoleOutputCP(65001);
+
+	int x;
+	while (true) {
+		cout << ".Добро пожаловать!!!\n ";
+		cout << "1.Начать игру\n";
+		cout << "2.Выйти\n";
+
+		if (x == 2) {
+			cout << "Досвиданияя!";
+		}
+		else if (x == 1) {
+			cout << "Введите число";
+			int y;
+			cin >> y;
+
+
+		}
+		system("pause < nul");
+	}

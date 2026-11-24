@@ -1,0 +1,27 @@
+#include <iostream>
+#include <Windows.h>
+using namespace std;
+int main() {
+	SetConsoleCP(65001);
+	SetConsoleOutputCP(65001);
+	int n;
+	int even = 0;
+	int odd = 0;
+	int i = 0;
+	while (i < 5) {
+		cout << "Введите число ";
+		cin >> n;
+		if (n % 2 == 0) {
+			cout << "Число " << n <<  "-> Четное   " << endl;
+			even++;
+		}
+		else {
+			cout << "Число " << n << " -> Не четное   " << endl;
+			odd++;
+		}
+		i++;
+	}
+	cout << "Четных чисел " << even << endl;
+	cout << "Не четных чисел " << odd << endl;
+	return 0;
+}
